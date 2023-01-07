@@ -3,8 +3,11 @@ package org.example;
 import java.util.ArrayList;
 
 public class Student {
-    static ArrayList<Student> list= new ArrayList<>();
 
+public  Student(int id, String name){
+    this.id= id;
+    this.name=name;
+}
     private int id;
     private String name;
 
@@ -27,16 +30,5 @@ public class Student {
         this.name = name;
     }
 
-    public void addStudent(Student student){
-        list.add(student);
-    }
 
-    public Student searchByName(String name){
-      for(Student student: list)  {
-          if(student.name.equalsIgnoreCase(name)){
-              return student;
-          }
-      }
-      return null;
-    }
 }
